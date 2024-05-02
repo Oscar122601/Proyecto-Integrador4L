@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -13,28 +11,16 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="811.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="811.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.GenerarVentaController">
    <children>
-      <DatePicker layoutX="149.0" layoutY="189.0" />
-      <Label layoutX="79.0" layoutY="191.0" text="FECHA" />
-      <Label layoutX="58.0" layoutY="230.0" text="ID PRODUCTO" />
-      <TextField layoutX="162.0" layoutY="226.0" />
-      <Label layoutX="39.0" layoutY="264.0" text="NOMBRE PRODUCTO" />
-      <TextField layoutX="162.0" layoutY="260.0" />
-      <Label layoutX="490.0" layoutY="160.0" text="DOCUMENTO" />
-      <TextField layoutX="598.0" layoutY="156.0" />
-      <Label layoutX="467.0" layoutY="191.0" text="TIPO DE DOCUMENTO" />
-      <ChoiceBox layoutX="597.0" layoutY="187.0" prefWidth="150.0" />
-      <Label layoutX="508.0" layoutY="230.0" text="NOMBRE" />
-      <TextField layoutX="598.0" layoutY="226.0" />
-      <Label layoutX="507.0" layoutY="264.0" text="APELLIDO" />
-      <TextField layoutX="598.0" layoutY="260.0" />
-      <Label layoutX="505.0" layoutY="298.0" text="TELEFONO" />
-      <TextField layoutX="598.0" layoutY="294.0" />
-      <Label layoutX="503.0" layoutY="337.0" text="DIRECCION" />
-      <TextField layoutX="598.0" layoutY="333.0" />
-      <Label layoutX="78.0" layoutY="298.0" prefHeight="0.0" prefWidth="38.0" text="VALOR" />
-      <TextField layoutX="162.0" layoutY="294.0" />
+      <Label layoutX="79.0" layoutY="191.0" text="Fecha" />
+      <Label layoutX="70.0" layoutY="221.0" text="Producto" />
+      <TextField fx:id="ProductoTxt" layoutX="162.0" layoutY="217.0" />
+      <Label layoutX="41.0" layoutY="289.0" text="Cedula del empleado" />
+      <TextField fx:id="CedEmpleadoTxt" layoutX="162.0" layoutY="285.0" />
+      <TextField fx:id="CedClienteTxt" layoutX="162.0" layoutY="320.0" />
+      <Label layoutX="66.0" layoutY="255.0" prefHeight="18.0" prefWidth="70.0" text="Cantidad" />
+      <TextField fx:id="CantidadTxt" layoutX="162.0" layoutY="251.0" />
       <AnchorPane prefHeight="122.0" prefWidth="811.0" style="-fx-background-color: #000000; -fx-border-color: #c6a05f;">
          <children>
             <ImageView fitHeight="120.0" fitWidth="133.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
@@ -66,7 +52,10 @@
          </children>
       </AnchorPane>
       <Label layoutX="79.0" layoutY="160.0" text="Id Venta" />
-      <TextField layoutX="162.0" layoutY="156.0" />
-      <Button layoutX="352.0" layoutY="346.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="GENERAR VENTA" />
+      <TextField fx:id="IdTxt" layoutX="162.0" layoutY="156.0" />
+      <Button fx:id="GenerarBtn" layoutX="270.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#ClickGenerar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="GENERAR VENTA" />
+      <Button fx:id="VolverBtn" layoutX="415.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#ClickVolver" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="VOLVER" />
+      <TextField fx:id="FechaTxt" layoutX="162.0" layoutY="187.0" />
+      <Label layoutX="41.0" layoutY="324.0" text="Cedula del cliente" />
    </children>
 </AnchorPane>

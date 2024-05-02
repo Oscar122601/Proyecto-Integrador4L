@@ -13,12 +13,12 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="687.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="687.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.ModificarProductoController">
    <children>
       <Label layoutX="426.0" layoutY="459.0" text="NOMBRE PRODUCTO" />
       <Label layoutX="250.0" layoutY="459.0" text="ID" />
-      <TextField layoutX="181.0" layoutY="484.0" />
-      <TextField layoutX="409.0" layoutY="484.0" />
+      <TextField fx:id="IdTxt" layoutX="181.0" layoutY="484.0" />
+      <TextField fx:id="NombreTxt" layoutX="409.0" layoutY="484.0" />
       <AnchorPane prefHeight="122.0" prefWidth="687.0" style="-fx-background-color: #000000;">
          <children>
             <ImageView fitHeight="136.0" fitWidth="124.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
@@ -49,18 +49,19 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="409.0" layoutY="517.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="MODIFICAR" />
-      <Button layoutX="291.0" layoutY="517.0" mnemonicParsing="false" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="BUSCAR" />
-      <TableView layoutX="14.0" layoutY="132.0" prefHeight="314.0" prefWidth="665.0">
+      <Button fx:id="ModificarBtn" layoutX="316.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#ClickModificar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="MODIFICAR" />
+      <Button fx:id="BuscarBtn" layoutX="196.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#ClickBuscar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="BUSCAR" />
+      <TableView fx:id="ProductoTable" layoutX="14.0" layoutY="132.0" prefHeight="314.0" prefWidth="665.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="NOMBRE" />
-          <TableColumn prefWidth="75.0" text="STOCK" />
-            <TableColumn prefWidth="75.0" text="DESCRIPCION" />
-            <TableColumn prefWidth="75.0" text="PRECIO" />
+          <TableColumn fx:id="NombreColumn" prefWidth="75.0" text="NOMBRE" />
+          <TableColumn fx:id="StockColumn" prefWidth="75.0" text="STOCK" />
+            <TableColumn fx:id="DescripcionColumn" prefWidth="75.0" text="DESCRIPCION" />
+            <TableColumn fx:id="PrecioColumn" prefWidth="75.0" text="PRECIO" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <Button fx:id="VolverBtn" layoutX="454.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#ClickVolver" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="VOLVER" />
    </children>
 </AnchorPane>

@@ -61,5 +61,6 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <Button fx:id="VolverBtn" layoutX="350.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ClickVolver" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="VOLVER" />
    </children>
 </AnchorPane>

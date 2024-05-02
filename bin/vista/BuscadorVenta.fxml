@@ -13,7 +13,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="744.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.ModificarVentaController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="744.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.BuscadorVentaController">
    <children>
       <AnchorPane layoutY="-1.0" prefHeight="122.0" prefWidth="744.0" style="-fx-background-color: #000000; -fx-border-color: #c6a05f;">
          <children>
@@ -22,7 +22,7 @@
                   <Image url="@../../Imagenes/LOGO.png" />
                </image>
             </ImageView>
-            <Label layoutX="174.0" layoutY="45.0" prefHeight="30.0" prefWidth="246.0" text="MODIFICAR VENTA">
+            <Label layoutX="174.0" layoutY="45.0" prefHeight="30.0" prefWidth="246.0" text="BUSCAR VENTA">
                <textFill>
                   <LinearGradient endX="0.7109004739336493" endY="0.22274881516587675" startX="0.6303317535545023" startY="1.0">
                      <stops>
@@ -64,6 +64,5 @@
          </columnResizePolicy>
       </TableView>
       <Button fx:id="VolverBtn" layoutX="350.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ClickVolver" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="VOLVER" />
-      <Button fx:id="ModificarBtn" layoutX="426.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ClickModificar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="MODIFICAR" />
    </children>
 </AnchorPane>
