@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="1088.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.LoginAdminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="1088.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginAdminController">
    <children>
       <ImageView fitHeight="129.0" fitWidth="185.0" layoutX="49.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -51,7 +51,7 @@
             <Image url="@../../Imagenes/Icono%20Proove.png" />
          </image>
       </ImageView>
-      <Button fx:id="GenerarProveedor" layoutX="918.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#ClickGenerarProveedor" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="GENERAR PROVEEDOR" />
+      <Button fx:id="GenerarProveedorBtn" layoutX="918.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#ClickGenerarProveedor" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="GENERAR PROVEEDOR" />
       <Button fx:id="ConsultarProveedorBtn" layoutX="918.0" layoutY="345.0" mnemonicParsing="false" onMouseClicked="#ClickConsultarProveedor" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="CONSULTAR PROVEEDOR" />
       <Button fx:id="ModificarEliminarProveedorBtn" layoutX="869.0" layoutY="385.0" mnemonicParsing="false" onMouseClicked="#ClickModificarEliminarProveedor" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="MODIFICAR/ELIMINAR PROVEEDOR" />
       <Button fx:id="GenerarClienteBtn" layoutX="592.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#ClickGenerarCliente" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="GENERAR CLIENTE" />
