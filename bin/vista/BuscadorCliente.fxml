@@ -47,7 +47,7 @@
       </AnchorPane>
       <Button fx:id="BuscarBtn" layoutX="211.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ClickBuscar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="BUSCAR" />
       <Label layoutX="71.0" layoutY="321.0" text="ID" />
-      <TextField fx:id="IdTxt" layoutX="136.0" layoutY="317.0" />
+      <TextField fx:id="NumeroTxt" layoutX="136.0" layoutY="317.0" />
       <Label layoutX="315.0" layoutY="321.0" text="Nombre" />
       <TextField fx:id="NombreTxt" layoutX="380.0" layoutY="317.0" />
       <TableView fx:id="ClienteTable" layoutX="9.0" layoutY="127.0" prefHeight="181.0" prefWidth="576.0">

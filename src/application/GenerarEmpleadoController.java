@@ -3,9 +3,6 @@ package application;
 import java.sql.SQLException;
 
 import datos.CRUDEmpleado;
-import datos.Empleado;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Button;

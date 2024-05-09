@@ -13,16 +13,16 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="744.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModificarVentaController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F5F5DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ModificarProveedorController">
    <children>
-      <AnchorPane layoutY="-1.0" prefHeight="122.0" prefWidth="744.0" style="-fx-background-color: #000000; -fx-border-color: #c6a05f;">
+      <AnchorPane layoutY="-1.0" prefHeight="118.0" prefWidth="600.0" style="-fx-background-color: #000000; -fx-border-color: #c6a05f;">
          <children>
             <ImageView fitHeight="120.0" fitWidth="133.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Imagenes/LOGO.png" />
                </image>
             </ImageView>
-            <Label layoutX="174.0" layoutY="45.0" prefHeight="30.0" prefWidth="246.0" text="MODIFICAR VENTA">
+            <Label layoutX="174.0" layoutY="45.0" prefHeight="30.0" prefWidth="246.0" text="MODIFICAR POVEEDOR">
                <textFill>
                   <LinearGradient endX="0.7109004739336493" endY="0.22274881516587675" startX="0.6303317535545023" startY="1.0">
                      <stops>
@@ -45,25 +45,23 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="BuscarBtn" layoutX="270.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ClickBuscar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="BUSCAR" />
-      <Label layoutX="71.0" layoutY="321.0" text="Fecha" />
-      <TextField fx:id="FechaTxt" layoutX="136.0" layoutY="317.0" />
-      <Label layoutX="315.0" layoutY="321.0" text="Cedula Cliente" />
-      <TextField fx:id="CedClienteTxt" layoutX="409.0" layoutY="317.0" />
-      <TableView fx:id="ProductoTable" layoutX="9.0" layoutY="127.0" prefHeight="182.0" prefWidth="725.0">
+      <Button fx:id="BuscarBtn" layoutX="169.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ClickBuscar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="BUSCAR" />
+      <Label layoutX="71.0" layoutY="321.0" text="ID" />
+      <TextField fx:id="IdTxt" layoutX="136.0" layoutY="317.0" />
+      <Label layoutX="315.0" layoutY="321.0" text="Nombre" />
+      <TextField fx:id="NombreTxt" layoutX="380.0" layoutY="317.0" />
+      <TableView fx:id="ProveedorTable" layoutX="9.0" layoutY="127.0" prefHeight="181.0" prefWidth="576.0">
         <columns>
-          <TableColumn fx:id="IdColumn" prefWidth="79.20001220703125" text="ID" />
-          <TableColumn fx:id="FechaColumn" prefWidth="96.00003051757812" text="FECHA" />
-            <TableColumn fx:id="ProductoColumn" prefWidth="108.0" text="PRODUCTO" />
-            <TableColumn fx:id="CantidadColumn" prefWidth="103.20001220703125" text="CANTIDAD" />
-            <TableColumn fx:id="CedVendedorColumn" prefWidth="167.99993896484375" text="CEDULA DEL VENDEDOR" />
-            <TableColumn fx:id="CedClienteColumn1" prefWidth="152.00006103515625" text="CEDULA DEL CLIENTE" />
+          <TableColumn fx:id="IdColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="NombreColumn" prefWidth="75.0" text="NOMBRE" />
+            <TableColumn fx:id="TelefonoColumn" prefWidth="75.0" text="TELEFONO" />
+            <TableColumn fx:id="DescripcionColumn" prefWidth="75.0" text="DESCRIPCION" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
       <Button fx:id="VolverBtn" layoutX="350.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ClickVolver" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="VOLVER" />
-      <Button fx:id="ModificarBtn" layoutX="426.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ClickModificar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="MODIFICAR" />
+      <Button fx:id="ModificarBtn" layoutX="246.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ClickModificar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="MODIFICAR" />
    </children>
 </AnchorPane>
