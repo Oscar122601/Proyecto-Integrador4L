@@ -7,19 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 
-public class CRUDCliente {
-	private String conectionstr = "jdbc:oracle:thin:@//localhost:1521";
-	private String username = "proyectointegrador2";
-	private String password = "proyectointegrador2";
+public class CRUDCliente extends ConeccionBD{
 	
-	public Connection getConnection() {
-		Connection conn = null;
-		try {
-			conn = DriverManager.getConnection(this.conectionstr, this.username, this.password);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();}
-		return conn;}
 	public boolean Crear(String documentonumero, String documentotipo, String nombre, String direccion, String telefono, String apellido) {
 	    CRUDCliente conn = new CRUDCliente();
 	    Connection connection = conn.getConnection();
@@ -89,4 +78,23 @@ public class CRUDCliente {
 	            } catch (SQLException e) {
 	                e.printStackTrace();
 	            }}}
-		return true;}}
+		return true;}
+	public boolean Eliminar(String documentonumero) {
+			CRUDProducto conn = new CRUDProducto();
+		    Connection connection = conn.getConnection();
+		    if (connection != null) {
+		        try {
+		            String Eliminar = "DELETE FROM cliente WHERE documentonumero = ?";
+		            PreparedStatement preparedStatement = connection.prepareStatement(Eliminar);
+		            preparedStatement.setString(1, documentonumero);
+		            int FilasEliminadas = preparedStatement.executeUpdate();
+		            return FilasEliminadas > 0;
+		        } catch (SQLException e) {
+		            e.printStackTrace();
+		        } finally {
+		            try {
+		                connection.close();
+		            } catch (SQLException e) {
+		                e.printStackTrace();
+		            }}}
+		    return false;}}

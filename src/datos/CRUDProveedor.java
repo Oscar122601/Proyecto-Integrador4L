@@ -7,19 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 
-public class CRUDProveedor {
-	private String conectionstr = "jdbc:oracle:thin:@//localhost:1521";
-	private String username = "proyectointegrador2";
-	private String password = "proyectointegrador2";
+public class CRUDProveedor extends ConeccionBD{
 	
-	public Connection getConnection() {
-		Connection conn = null;
-		try {
-			conn = DriverManager.getConnection(this.conectionstr, this.username, this.password);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();}
-		return conn;}
 	public boolean Crear(String id, String nombre, String telefono, String descripcion) {
 	    CRUDProveedor conn = new CRUDProveedor();
 	    Connection connection = conn.getConnection();
@@ -85,4 +74,23 @@ public class CRUDProveedor {
 	            } catch (SQLException e) {
 	                e.printStackTrace();
 	            }}}
-		return true;}}
+		return true;}
+	public boolean Eliminar(String id) {
+		CRUDProducto conn = new CRUDProducto();
+	    Connection connection = conn.getConnection();
+	    if (connection != null) {
+	        try {
+	            String Eliminar = "DELETE FROM proveedor WHERE id = ?";
+	            PreparedStatement preparedStatement = connection.prepareStatement(Eliminar);
+	            preparedStatement.setString(1, id);
+	            int FilasEliminadas = preparedStatement.executeUpdate();
+	            return FilasEliminadas > 0;
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        } finally {
+	            try {
+	                connection.close();
+	            } catch (SQLException e) {
+	                e.printStackTrace();
+	            }}}
+	    return false;}}

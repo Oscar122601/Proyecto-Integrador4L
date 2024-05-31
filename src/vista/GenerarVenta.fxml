@@ -53,8 +53,8 @@
       </AnchorPane>
       <Label layoutX="79.0" layoutY="160.0" text="Id Venta" />
       <TextField fx:id="IdTxt" layoutX="162.0" layoutY="156.0" />
-      <Button fx:id="GenerarBtn" layoutX="270.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#ClickGenerar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="GENERAR VENTA" />
-      <Button fx:id="VolverBtn" layoutX="415.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#ClickVolver" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="VOLVER" />
+      <Button fx:id="GenerarBtn" layoutX="145.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#ClickGenerar" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="GENERAR VENTA" />
+      <Button fx:id="VolverBtn" layoutX="304.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#ClickVolver" style="-fx-background-color: linear-gradient(from 65.4028% 100.0% to 64.455% 14.218%, #785126 0.0%, #785126 0.6711%, #fef1ce 100.0%);" text="VOLVER" />
       <TextField fx:id="FechaTxt" layoutX="162.0" layoutY="187.0" />
       <Label layoutX="41.0" layoutY="324.0" text="Cedula del cliente" />
    </children>

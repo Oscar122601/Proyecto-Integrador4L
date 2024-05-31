@@ -7,20 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 
-public class CRUDEmpleado {
-	private String conectionstr = "jdbc:oracle:thin:@//localhost:1521";
-	private String username = "proyectointegrador2";
-	private String password = "proyectointegrador2";
+public class CRUDEmpleado extends ConeccionBD{
 	
-	public Connection getConnection() {
-		Connection conn = null;
-		try {
-			conn = DriverManager.getConnection(this.conectionstr, this.username, this.password);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();}
-		return conn;}
-	public boolean CrearEmpleado(String cedula, String puesto, String nombre, String apellido, String telefono, String direccion) {
+	public boolean Crear(String cedula, String puesto, String nombre, String apellido, String telefono, String direccion) {
 	    CRUDEmpleado conn = new CRUDEmpleado();
 	    Connection connection = conn.getConnection();
 	    boolean estado =false;
@@ -44,7 +33,7 @@ public class CRUDEmpleado {
 	            } catch (SQLException e) {
 	                e.printStackTrace();}}}
 	    return estado;}	
-	public LinkedList<Empleado> MostrarEmpleado(String cedula, String nombre) {
+	public LinkedList<Empleado> Mostrar(String cedula, String nombre) {
 		CRUDEmpleado conn = new CRUDEmpleado();
 		Connection con = conn.getConnection();
 		LinkedList<Empleado> empleado = new LinkedList<>();
@@ -89,4 +78,23 @@ public class CRUDEmpleado {
 	            } catch (SQLException e) {
 	                e.printStackTrace();
 	            }}}
-		return true;}}
+		return true;}
+	public boolean Eliminar(String cedula) {
+		CRUDProducto conn = new CRUDProducto();
+	    Connection connection = conn.getConnection();
+	    if (connection != null) {
+	        try {
+	            String Eliminar = "DELETE FROM empleado WHERE cedula = ?";
+	            PreparedStatement preparedStatement = connection.prepareStatement(Eliminar);
+	            preparedStatement.setString(1, cedula);
+	            int FilasEliminadas = preparedStatement.executeUpdate();
+	            return FilasEliminadas > 0;
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        } finally {
+	            try {
+	                connection.close();
+	            } catch (SQLException e) {
+	                e.printStackTrace();
+	            }}}
+	    return false;}}
