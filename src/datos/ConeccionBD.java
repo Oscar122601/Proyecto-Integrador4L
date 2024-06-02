@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class ConeccionBD {
 	private String conectionstr = "jdbc:oracle:thin:@//localhost:1521";
-	private String username = "proyectointegrador2";
-	private String password = "proyectointegrador2";
+	private String username = "PROYECTINT";
+	private String password = "PROYECTINT";
 	
 	public Connection getConnection() {
 		Connection conn = null;
