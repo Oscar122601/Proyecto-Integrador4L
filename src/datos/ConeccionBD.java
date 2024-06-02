@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConeccionBD {
-	private String conectionstr = "jdbc:oracle:thin:@//localhost:1521";
+	private String conectionstr = "jdbc:oracle:thin:@192.168.254.215:1521:orcl";
 	private String username = "PROYECTINT";
 	private String password = "PROYECTINT";
 	
